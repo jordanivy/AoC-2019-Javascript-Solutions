@@ -23,7 +23,7 @@ function intcode(programInput){
                 opCodeOne(input, i, mode);
                 numInstructions = 4;
                 break;
-                case 2:
+            case 2:
                 opCodeTwo(input, i, mode);
                 numInstructions = 4;
                 break;
@@ -31,13 +31,12 @@ function intcode(programInput){
                 opCodeThree(input, i, programInput);
                 numInstructions = 2;
                 break;
-                case 4:
+            case 4:
                 opCodeFour(input, i, mode);
                 numInstructions = 2;
                 break;
             case 5:
                 result = opCodeFive(input, i, mode);
-                // console.log("RESULT: " + result);
                 if (result != null) {
                     i = result;
                     numInstructions = 0;
